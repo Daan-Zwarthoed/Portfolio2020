@@ -1,0 +1,46 @@
+textarea{
+overflow: scroll;
+height: 90vh;
+width: 90vw;
+background-color: white;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3b54ff;
+}
+
+ul{
+  display: inline-flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 80vw;
+}
+
+ul li{
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #667aff;
+color: white;
+height: 1.5em;
+width: 7em;
+border-radius: 1em;
+}
+
+ul li:hover{
+  cursor: pointer;
+  box-shadow: 1px 1px 4px black;
+}
+
+.hidden{
+ visibility: hidden;
+ position: absolute;
+}
+
+.actief{
+  color: white;
+}

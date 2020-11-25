@@ -1,0 +1,405 @@
+*, html{
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+body{
+background-color: black;
+}
+
+main{
+  background-color: white;
+}
+header, nav, header div, footer{
+  background-color: black;
+  color: white;
+}
+
+
+/* Einde algemeen */
+
+
+/* Begin header */
+
+/* Begin navigatie */
+
+nav, nav *{
+  height: 2em;
+  display: flex;
+  align-items: center;
+}
+
+nav div:nth-of-type(1){
+  position: absolute;
+  visibility: hidden;
+  width: 5em;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+}
+
+nav div:nth-of-type(2){
+  position: fixed;
+  z-index: 4;
+}
+
+nav div ul{
+  height: 2em;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0;
+}
+
+nav ul li{
+  display: flex;
+  text-decoration: underline;
+}
+
+nav ul li:hover, nav div:nth-of-type(1):hover{
+  cursor: pointer;
+  color: red;
+}
+
+.navIntro{
+  position: absolute;
+  bottom: 5em;
+  right: 1em;
+}
+
+.navIntro ul{
+ display: flex;
+ flex-direction: column;
+ align-items: flex-end;
+ padding: 0;
+}
+
+.navIntro ul li{
+  margin-bottom: 1em;
+}
+
+.frontEnd nav, .portfolio nav, .programmeren nav{
+  position: absolute;
+}
+
+.frontEnd nav div, .portfolio nav div, .programmeren nav div{
+  visibility: visible;
+  position: fixed;
+  text-decoration: underline;
+}
+
+/* Einde navigatie */
+
+
+
+/* Begin intro */
+.intro{
+  position: relative;
+}
+ .intro > *{
+   float: left;
+}
+
+.intro > div{
+  height: 80vh;
+  width: 70vw;
+}
+
+.intro > article{
+  width: 30vw;
+}
+
+.intro:after{
+  content:"";
+  display: table;
+  clear: both;
+
+}
+
+
+
+.home .intro > div{
+  background-image: url(../images/instagram-foto.jpg);
+}
+
+.programmeren .intro > div{
+  background-image: url(../images/pestenFoto.jpg);
+}
+
+.frontEnd .intro > div{
+  background-image: url(../images/lichtenFoto.jpg);
+}
+
+.portfolio .intro > div{
+  background-image: url(../images/portfolio.png);
+}
+
+.intro > div{
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+position: relative;
+}
+
+.intro div h1{
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  width: 10%;
+  font-size: 200%;
+}
+
+.intro article{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 2em;
+}
+
+.intro article p{
+  text-align: right;
+}
+
+/* Einde intro */
+
+/* Begin anders telefoon */
+@media screen and (max-width: 800px){
+  .intro > * {
+    width: 100% !important;
+  }
+  .intro > div{
+    height: 50vh;
+  }
+  .navTop div:nth-of-type(2){
+position:absolute !important;
+  }
+  .navTop div:nth-of-type(1){
+    position: fixed;
+    visibility: visible;
+  }
+  .navIntro{
+    position: absolute;
+    visibility: hidden;
+  }
+}
+/* Einde anders telefoon */
+
+
+
+
+/* Begin gradient */
+
+.gradientHeader{
+  position: relative;
+  height: 50vh;
+  width: 100vw;
+  overflow: hidden;
+}
+header .gradientHeader div{
+  left: 25%;
+  top:25%;
+  transform:translate(-50%, -50%) rotate(9deg);
+width: 200vw;
+position: absolute;
+}
+
+header .gradientHeader div:nth-of-type(1){
+  z-index: 2;
+  height: 20vh;
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%);
+}
+
+header .gradientHeader div:nth-of-type(2){
+  z-index: 1;
+  height: 100vh;
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%);
+}
+
+/* Einde gradient */
+
+/* Einde header */
+
+
+
+
+
+
+/* Begin main */
+
+main{
+  padding-left: 10vw;
+  padding-right: 10vw;
+  display: flex;
+  flex-direction: column;
+}
+.favorietProjecten{
+  min-width: 100%;
+  margin: 0;
+}
+
+.favorieteProjecten *{
+  text-decoration: none;
+  color: inherit;
+}
+
+.favorieteProjecten section{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+
+}
+
+.favorieteProjecten section div{
+  border: 1px solid black;
+  height: 400px;
+  width: 300px;
+  margin-bottom: 1em; margin-top: 1em;
+  position: relative;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.favorieteProjecten div img{
+  height: 200px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.favorieteProjecten div h3{
+  margin-left: 1em;
+}
+
+.favorieteProjecten section div:hover{
+transform: translateY(-1em);
+}
+
+
+.favorieteProjecten >div{
+  position: relative;
+  margin-top: 1.5em;
+}
+
+.favorieteProjecten > div > h2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: auto;
+padding-left: 1em;
+padding-right: 1em;
+text-decoration: underline;
+}
+
+.favorieteProjecten >div > h2:hover{
+color: red;
+cursor: pointer;
+}
+
+/* Begin over mij */
+
+main .overMij{
+  margin-top: 2em;
+}
+
+main .overMij >*{
+  margin-bottom: 1em;
+}
+
+/* Einde over mij */
+
+/* Einde main */
+
+
+
+/* Begin anders op detailpagina's */
+
+.frontEnd main a, .programmeren main a, .portfolio main a{
+  color: black;
+}
+
+.frontEnd main a:hover, .programmeren main a:hover, .portfolio main a:hover{
+  color: red;
+}
+
+.frontEnd main > div{
+  display: flex;
+  flex-wrap: wrap;
+  width: 20em;
+  flex-direction: row;
+
+}
+
+.frontEnd main > div > a{
+  width: 10em;
+  height: 3em;
+  display: flex;
+  align-items: center;
+}
+
+.frontEnd main h2{
+  margin-top: 1em;
+}
+
+.portfolio main li{
+  font-weight: bold;
+}
+
+/* Einde anders op detailpagina's */
+
+
+
+
+/* Begin footer */
+
+/* Begin gradient footer */
+.gradientFooter{
+  position: relative;
+  height: 50vh;
+  width: 100vw;
+  overflow: hidden;
+}
+footer .gradientFooter div{
+  left: 25%;
+  bottom:50%;
+  transform:translate(-50%, 50%) rotate(189deg);
+width: 200vw;
+position: absolute;
+}
+
+footer .gradientFooter div:nth-of-type(1){
+  z-index: 2;
+  height: 20vh;
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%);
+}
+
+footer .gradientFooter div:nth-of-type(2){
+  z-index: 1;
+  height: 100vh;
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%);
+}
+
+/* Begin gradient footer */
+
+/* Begin tekst in footer */
+
+footer article{
+position: absolute;
+z-index: 3;
+bottom: 1em;
+left: 1em;
+}
+
+/* Einde teskt in footer */
+
+/* Einde footer */

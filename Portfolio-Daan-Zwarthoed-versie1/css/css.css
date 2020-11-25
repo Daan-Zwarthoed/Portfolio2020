@@ -1,0 +1,302 @@
+/*begin algemeen*/
+*,
+html {
+  box-sizing: border-box;
+  margin: 0;
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+body div, header, footer{
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+p, li, a{
+   font-size: 1.1em;
+}
+
+header, footer {
+  position: fixed;
+  height: 6vh;
+  width: 100vw;
+  z-index: 10;
+}
+
+nav li:hover, a:hover, footer p:hover, .middleLink:hover{
+  cursor: pointer;
+  box-shadow: 1px 1px 4px black;
+}
+
+/*Einde algemeen*/
+/* begin header */
+header {
+  top: 0;
+  padding: 1vw;
+  padding-left: 1vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1px 0px 5px white;
+}
+
+nav li {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 8vw;
+  border-radius: 10vw;
+  margin: 1vw;
+  height: 1.5em ;
+  color: #667aff;
+}
+
+
+
+/* einde header */
+/* begin div */
+main>div {
+  padding: 1vw;
+  padding-top: 8vh;
+  padding-bottom: 8vh;
+  height: 100vh;
+}
+
+div h2 {
+  margin-bottom: 1vh;
+}
+
+.overMij {
+  background-color: #667aff;
+}
+
+.MijnWerk {
+  background-color: #4f66ff;
+}
+
+.goals {
+  background-color: #3b54ff;
+}
+
+.contact {
+  background-color: #2b46ff;
+}
+
+/* einde div */
+
+/* begin over mij */
+.overMij{
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content:flex-start;
+  flex-wrap: wrap;s
+}
+
+.overMij > * {
+  width: 600px;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+
+}
+
+.overMij img {
+ width: 300px;
+}
+
+
+/* einde over mij */
+
+/* Begin MijnWerk */
+.links{
+  display: flex;
+  width: 98vw;
+  flex-wrap: wrap;
+  height: 400px;
+  justify-content: center;
+  padding-top: 50px;
+
+}
+
+.links span{
+min-width: 600px;
+max-width: 400px;
+height: 70%;
+margin-bottom: 2em;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+.links img{
+  height: 100px;
+  margin-bottom: .5em;
+}
+
+
+.links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding-left: 10px; padding-right: 10px;
+  width: 10em;
+  border-radius: 100px;
+  height: 1.5em;
+  color: #667aff;
+  text-decoration: none;
+  margin-bottom: .5em;
+}
+
+/* Einde MijnWerk */
+
+
+/* begin goals*/
+.goals article ul {
+  margin-top: 1vh;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.goals ul {
+  padding-left: 0;
+}
+
+.goals article li {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-style: solid;
+  border-color: white;
+  height: 24vh;
+  padding: 0.3vh;
+}
+
+.goals article img {
+  display: inline-flex;
+  width: 10em;
+  object-fit:contain;
+  margin-right: 1vw;
+}
+
+.goals article li p{
+  width: 40em;
+  display: flex;
+  justify-content: center;
+  align-items:  center;
+  text-align: center;
+}
+
+
+/* einde goals */
+/* begin contact */
+.contact div{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+.contact span {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  width: 600px;
+  max-width: 98vw;
+  height: 30vh;
+  max-height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact span a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 200px;
+  border-radius: 10vw;
+  margin: 1vw;
+  height: 1.8em;
+  color: #2b46ff;
+  text-decoration: none;
+}
+
+/* einde contact */
+
+/* begin footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  box-shadow: -1px 0px 5px white;
+}
+
+footer p:nth-child(1){
+  position: absolute;
+  left: 1em;
+}
+
+.goDown {
+  background-color: white;
+    width: 8vw;
+  border-radius: 10vw;
+  margin: 1vw;
+  height: 3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* einde footer */
+
+/* begin actief verandert */
+.actief {
+  color: black !important;
+}
+
+.kleurOverMij {
+  color: #667aff;
+}
+
+.kleurMijnWerk {
+  color: #4f66ff;
+}
+
+.kleurGoals {
+  color: #3b54ff;
+}
+
+.kleurContact {
+  color: #2b46ff;
+}
+
+.achtergrondKleurOverMij {
+  background-color: #667aff;
+}
+
+.achtergrondKleurMijnWerk {
+  background-color: #4f66ff;
+}
+
+.achtergrondKleurGoals {
+  background-color: #3b54ff;
+}
+
+.achtergrondKleurContact {
+  background-color: #2b46ff;
+}
+
+
+/* einde actief verandert */

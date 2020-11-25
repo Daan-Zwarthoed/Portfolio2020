@@ -1,0 +1,74 @@
+html, *{
+    margin: 0;
+    color: white;
+    font-size: 1.1em;
+}
+
+body{
+    background-color: black;
+}
+
+.knoppen{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 90%; 
+    bottom:10%;
+    left: 16vw;
+    width: 65vw;
+}
+
+.knop1, .knop2{
+    width: 100vw;
+}
+
+.begin{
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    left: 17vw;
+    top: 40%;
+}
+
+button{
+    height:70px;
+    margin: 5px;
+    font-size:2em;
+    color: white;
+    background-color: black;
+    border-style: solid;
+    border-color: white;
+}
+
+video{
+    position: absolute;
+    left: 12vw;
+    height: 100vh;
+}
+
+.nietUitgewerkt, .doodgaan{
+    position: absolute;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+}
+
+.nietUitgewerkt{
+    background-color: firebrick;
+}
+
+.doodgaan{
+    background-color: black;
+}
+
+
+
+.hidden{
+    visibility: hidden;
+}

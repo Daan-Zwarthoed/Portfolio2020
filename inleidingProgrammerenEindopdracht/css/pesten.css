@@ -1,0 +1,94 @@
+*, html{
+    box-sizing: border-box;
+}
+
+/*Vormgeving zodat alles onder elkaar komt te staan*/
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*vormgeving van de kaartjes in een rij zetten*/
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/*vormgeving zodat het op een kaart lijkt*/
+li, #midden, #kaartpakken{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    padding-left: auto; padding-right: auto;
+    height: 150px;
+    width: 100px;
+}
+
+/*Vormgeving zodat het midden in een rij staat in het midden*/
+div{
+display: flex;
+    justify-content: center;
+}
+
+/*Vormgeving centreren van speler 1 en speler 2*/
+ h2, h3{
+   margin-left: auto; margin-right: auto;
+    margin-top: 10px; margin-bottom: 10px;
+}
+
+/*margin om de middelste elementen heen*/
+p{
+    margin-left: 10px; margin-right: 10px;
+}
+
+/*achtergrond middenkaart*/
+#midden{
+    background-color: blanchedalmond;
+}
+
+form{
+    display: flex;
+    position:absolute;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color:cyan;
+    height: 150px;
+    width: 300px;
+    margin-top: 40vh;
+    margin-left: 70vh;
+}
+
+
+
+
+form>p{
+    margin: 4px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#winachtergrond{
+    display: flex;
+    position:absolute;
+    justify-content: center;
+    align-items: center;
+     background-color:forestgreen;
+width: 200vh;
+    height: 100vh;
+    margin: 0;
+
+}
+
+#gewonnen{
+    color: white;
+    font-size: 5em;
+}
+
+
+.hidden{
+    visibility: hidden;
+}
