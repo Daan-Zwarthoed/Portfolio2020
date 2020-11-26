@@ -35,10 +35,28 @@ function navigatieUpdaten() {
 }
 navigatieUpdaten();
 
+// Dit is om terug te gaan naar de site
 var terugKnop = document.querySelector('.frontEnd nav div, .portfolio nav div, .programmeren nav div, .dezeDivDoetNiks');
-
 function terug(){
 window.history.back()
 }
 
 terugKnop.addEventListener('click', terug);
+
+// Einde terug naar de site
+
+// Begin dropdown meer meerProjecten
+
+var dropdownZelf = document.querySelector('.meerProjecten, .dezeDivDoetNiks')
+var dropdownKnop = document.querySelector('.meerProjecten div, .dezeDivDoetNiks');
+
+function toggleDropdown(){
+dropdownZelf.classList.toggle('dropdownActief');
+console.log(dropdownZelf);
+}
+
+
+dropdownKnop.addEventListener('click', toggleDropdown);
+
+
+// Einde dropdown meer projecten
