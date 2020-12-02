@@ -353,17 +353,14 @@ main {
 
 /* Begin dropdown */
 .dropdownActief {
-  position: relative;
-  overflow-y: scroll;
   height: 500px;
-}
-
-.dropdownActief>div:nth-of-type(2) {
-  position: relative;
+  overflow-y: scroll
 }
 
 .dropdownActief>div:nth-of-type(2) {
   display: block;
+  overflow-y: scroll;
+  height: 450px;
 }
 
 .dropdownActief>div:nth-of-type(2)>div {
@@ -507,13 +504,15 @@ footer ul li a:hover {
 
 /* Einde teskt in footer */
 /* Einde footer */
+
+/* Begin transition in and out */
 body {
   position: relative;
-  animation: transitionIn 1s;
+  animation: transitionIn .6s;
 }
 
 .opacityZero {
-  animation: transitionOut 1s;
+  animation: transitionOut .6s;
 }
 
 @keyframes transitionIn {
@@ -535,3 +534,5 @@ body {
     opacity: 0;
   }
 }
+
+/* Einde transition in and out */

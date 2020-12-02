@@ -41,7 +41,7 @@ var body = document.querySelector('body');
 function triggerAnderePagina() {
   body.classList.add('opacityZero');
   var linkNaarProject = this;
-  setTimeout(function(){ window.location.href = linkNaarProject.className;}, 1000);
+  setTimeout(function(){ window.location.href = linkNaarProject.className;}, 500);
 }
 
 var i;
@@ -68,7 +68,7 @@ function terug(){
   setTimeout(function(){
     window.location.href = "index.html";
     window.history.back();
-  }, 1000)
+  }, 500)
 
 }
 
