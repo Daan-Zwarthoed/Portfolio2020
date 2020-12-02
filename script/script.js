@@ -35,15 +35,48 @@ function navigatieUpdaten() {
 }
 navigatieUpdaten();
 
+// Dit is om naar 1 specifiek project te gaan
+var body = document.querySelector('body');
+
+function triggerAnderePagina() {
+  body.classList.add('opacityZero');
+  var linkNaarProject = this;
+  setTimeout(function(){ window.location.href = linkNaarProject.className;}, 1000);
+}
+
+var i;
+function andereProjectenUpdaten() {
+
+  projecten = document.querySelectorAll('.projectenZelf > div');
+  for (i = 0; i < projecten.length; i++) {
+    result = projecten[i];
+    result.addEventListener('click', triggerAnderePagina);
+  }
+}
+andereProjectenUpdaten();
+
+// Einde naar 1 specifiek project
+
+
 // Dit is om terug te gaan naar de site
+
 var terugKnop = document.querySelector('.frontEnd nav div, .portfolio nav div, .programmeren nav div, .dezeDivDoetNiks');
+
 function terug(){
-window.history.back()
+  body.classList.add('opacityZero');
+
+  setTimeout(function(){
+    window.location.href = "index.html";
+    window.history.back();
+  }, 1000)
+
 }
 
 terugKnop.addEventListener('click', terug);
 
 // Einde terug naar de site
+
+
 
 // Begin dropdown meer meerProjecten
 
@@ -52,7 +85,6 @@ var dropdownKnop = document.querySelector('.meerProjecten div, .dezeDivDoetNiks'
 
 function toggleDropdown(){
 dropdownZelf.classList.toggle('dropdownActief');
-console.log(dropdownZelf);
 }
 
 

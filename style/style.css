@@ -1,36 +1,32 @@
-*, html{
+*, html {
   box-sizing: border-box;
   margin: 0;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-body{
-background-color: black;
+body {
+  background-color: black;
 }
 
-main{
+main {
   background-color: white;
 }
-header, nav, header div, footer{
+
+header, nav, header div, footer {
   background-color: black;
   color: white;
 }
 
-
 /* Einde algemeen */
-
-
 /* Begin header */
-
 /* Begin navigatie */
-
-nav, nav *{
+nav, nav * {
   height: 2em;
   display: flex;
   align-items: center;
 }
 
-nav div:nth-of-type(1){
+nav div:nth-of-type(1) {
   position: absolute;
   visibility: hidden;
   width: 5em;
@@ -40,12 +36,12 @@ nav div:nth-of-type(1){
   clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
 }
 
-nav div:nth-of-type(2){
+nav div:nth-of-type(2) {
   position: fixed;
   z-index: 4;
 }
 
-nav div ul{
+nav div ul {
   height: 2em;
   width: 100vw;
   display: flex;
@@ -54,444 +50,488 @@ nav div ul{
   padding: 0;
 }
 
-nav ul li{
+nav ul li {
   display: flex;
   text-decoration: underline;
 }
 
-nav ul li:hover, nav div:nth-of-type(1):hover{
+nav ul li:hover, nav div:nth-of-type(1):hover {
   cursor: pointer;
   color: red;
 }
 
-.navIntro{
+.navIntro {
   position: absolute;
   bottom: 5em;
   right: 1em;
+
+
 }
 
-.navIntro ul{
- display: flex;
- flex-direction: column;
- align-items: flex-end;
- padding: 0;
+.navIntro ul {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+   width: 30vw;
+   margin-top: 27vh;
+  padding: 0;
 }
 
-.navIntro ul li{
+.navIntro ul li {
   margin-bottom: 1em;
+  font-size: 1.2em;
 }
 
-.frontEnd nav, .portfolio nav, .programmeren nav{
+.frontEnd nav, .portfolio nav, .programmeren nav {
   position: absolute;
 }
 
-.frontEnd nav div, .portfolio nav div, .programmeren nav div{
+.frontEnd nav div, .portfolio nav div, .programmeren nav div {
   visibility: visible;
   position: fixed;
   text-decoration: underline;
 }
 
 /* Einde navigatie */
-
-
-
 /* Begin intro */
-.intro{
+.intro {
   position: relative;
 }
- .intro > *{
-   float: left;
+
+.intro>* {
+  float: left;
 }
 
-.intro > div{
+.intro>div {
   height: 80vh;
   width: 70vw;
 }
 
-.intro > article{
+.intro>article {
   width: 30vw;
 }
 
-.intro:after{
-  content:"";
+.intro:after {
+  content: "";
   display: table;
   clear: both;
-
 }
 
-
-
-.home .intro > div{
+.home .intro>div {
   background-image: url(../images/instagram-foto.jpg);
 }
 
-.programmeren .intro > div{
+.programmeren .intro>div {
   background-image: url(../images/pestenFoto.jpg);
 }
 
-.frontEnd .intro > div{
+.frontEnd .intro>div {
   background-image: url(../images/lichtenFoto.jpg);
 }
 
-.portfolio .intro > div{
+.portfolio .intro>div {
   background-image: url(../images/portfolio.png);
 }
 
-.intro > div{
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
-position: relative;
+.intro>div {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
-.intro div h1{
+.intro div h1 {
   position: absolute;
-  bottom: 1em;
-  left: 1em;
-  width: 10%;
-  font-size: 200%;
+  bottom: 1vw;
+  left: 1vw;
+  width: 20%;
+  font-size: 5vw;
 }
 
-.intro article{
+.intro article {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   padding: 2em;
 }
 
-.intro article p{
+.intro article p {
   text-align: right;
+  font-size: 1.2em;
 }
 
 /* Einde intro */
-
 /* Begin anders telefoon */
-@media screen and (max-width: 800px){
-  .intro > * {
+@media screen and (max-width: 800px) {
+  .intro>* {
     width: 100% !important;
   }
-  .intro > div{
+
+  .intro>div {
     height: 50vh;
   }
-  .navTop div:nth-of-type(2){
+
+  .navTop div:nth-of-type(2) {
     height: 4em;
-    align-items:flex-end;
+    align-items: flex-end;
   }
 
-  .navTop div:nth-of-type(2){
-position:absolute !important;
+  .intro>div>h1 {
+    font-size: 10vw;
   }
-  .navTop div:nth-of-type(1){
+
+  .navTop div:nth-of-type(2) {
+    position: absolute !important;
+  }
+
+  .navTop div:nth-of-type(1) {
     position: fixed;
     visibility: visible;
   }
-  .navIntro{
+
+  .navIntro {
     position: absolute;
     visibility: hidden;
   }
-  .favorieteProjecten section a{
-    margin-left: auto; margin-right: auto;
+
+  .favorieteProjecten section a {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
+
 /* Einde anders telefoon */
-
-
-
-
 /* Begin gradient */
-
-.gradientHeader{
+.gradientHeader {
   position: relative;
   height: 50vh;
   width: 100vw;
   overflow: hidden;
 }
-header .gradientHeader div{
+
+header .gradientHeader div {
   left: 25%;
-  top:25%;
-  transform:translate(-50%, -50%) rotate(9deg);
-width: 200vw;
-position: absolute;
+  top: 25%;
+  transform: translate(-50%, -50%) rotate(9deg);
+  width: 200vw;
+  position: absolute;
 }
 
-header .gradientHeader div:nth-of-type(1){
+header .gradientHeader div:nth-of-type(1) {
   z-index: 2;
   height: 20vh;
-  background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 100%);
 }
 
-header .gradientHeader div:nth-of-type(2){
+header .gradientHeader div:nth-of-type(2) {
   z-index: 1;
   height: 100vh;
-  background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 100%);
 }
 
 /* Einde gradient */
-
 /* Einde header */
-
-
-
-
-
-
 /* Begin main */
-
-main{
+main {
   padding-left: 10vw;
   padding-right: 10vw;
   display: flex;
   flex-direction: column;
 }
-.favorietProjecten{
+
+.favorietProjecten {
   min-width: 100%;
   margin: 0;
 }
 
-.projectenZelf *{
+.projectenZelf * {
   text-decoration: none;
   color: black;
 }
 
-.projectenZelf{
+.projectenZelf {
   display: flex;
   justify-content: space-between;
   width: 100%;
   flex-wrap: wrap;
-
 }
 
-.projectenZelf div{
+.projectenZelf div {
   border: 1px solid black;
   height: 300px;
   width: 300px;
-  margin-bottom: 1em; margin-top: 1em;
-
+  margin-bottom: 1em;
+  margin-top: 1em;
   position: relative;
   overflow: hidden;
   transition: .5s;
 }
 
-.projectenZelf div img{
+.projectenZelf div img {
   height: 200px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-
 }
 
-.projectenZelf div h3{
+.projectenZelf div h3 {
   margin-left: 1em;
 }
 
-.projectenZelf div:hover{
-transform: translateY(-1em);
+.projectenZelf div:hover {
+  cursor: pointer;
+  transform: translateY(-1em);
 }
-
-
-
 
 /* Begin meer projecten */
+.meerProjecten {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  transition: 2s;
+  height: 0;
+}
 
-.meerProjecten > div:nth-of-type(1) > p{
+.meerProjecten>div:nth-of-type(1)>p {
   transition: .5s;
 }
-.meerProjecten > div:nth-of-type(1) {
+
+.meerProjecten>div:nth-of-type(1) {
   position: relative;
-  margin-top: 1.5em;
-
+  background-color: white;
+  z-index: 1;
+  height: 3em;
+  display: flex;
+  align-items: center;
 }
 
-.meerProjecten >div:nth-of-type(1) > h2, .meerProjecten > div:nth-of-type(1) > p{
+.meerProjecten>div:nth-of-type(1)>hr {
+  display: block;
+  width: 100%;
+  height: 1px;
+}
+
+.meerProjecten>div:nth-of-type(1)>h2, .meerProjecten>div:nth-of-type(1)>p {
   position: absolute;
-    background-color: white;
+  background-color: white;
 }
 
-.meerProjecten > div:nth-of-type(1) > h2{
+.meerProjecten>div:nth-of-type(1)>h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-padding-left: 1vw;
-padding-right: 1vw;
-text-decoration: underline;
-text-align: center;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  text-decoration: underline;
+  text-align: center;
 }
 
-.meerProjecten > div:nth-of-type(1) > p{
+.meerProjecten>div:nth-of-type(1)>p {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-font-size: 3em;
-width: 1em;
-height: 1em;
-display: flex;
-justify-content: center;
-align-items: center;
-transform-origin: center center;
-border-radius: 100%;
+  font-size: 3em;
+  width: 1em;
+  height: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: center center;
+  border-radius: 100%;
 }
 
-.meerProjecten > div:nth-of-type(1) > h2:hover{
-color: red;
-cursor: pointer;
+.meerProjecten>div:nth-of-type(1):hover {
+  color: red;
+  cursor: pointer;
 }
 
-.meerProjecten > div:nth-of-type(2){
-display: none;
+.meerProjecten>div:nth-of-type(2) {
+  display: none;
 }
-
-
 
 /* Begin dropdown */
+.dropdownActief {
+  position: relative;
+  overflow-y: scroll;
+  height: 500px;
+}
 
-.dropDownActief{
+.dropdownActief>div:nth-of-type(2) {
+  position: relative;
+}
+
+.dropdownActief>div:nth-of-type(2) {
   display: block;
-  flex-direction: column;
-
 }
 
-.dropdownActief > div:nth-of-type(2){
-  height: 200vh;
-}
-
-.dropdownActief > div:nth-of-type(2) > div{
+.dropdownActief>div:nth-of-type(2)>div {
   display: flex;
   justify-content: space-between;
-margin-top: 2em;
-text-decoration: underline;
-transition: 0;
+  margin-top: 2em;
+  text-decoration: underline;
+  transition: 0;
 }
 
-.dropdownActief > div:nth-of-type(1) > p{
-transform: translateY(-50%) rotate(90deg);
-
+.dropdownActief>div:nth-of-type(1)>p {
+  transform: translateY(-50%) rotate(90deg);
 }
 
-.dropdownActief > div:nth-of-type(2) > h3:hover{
+.dropdownActief>div:nth-of-type(2)>div>h3:hover {
   color: red;
-  cursor: red;
+  cursor: pointer;
 }
+
 /* Einde dropdown */
-
 /* Einde meer projecten */
-
-
 /* Begin over mij */
-
-main .overMij{
+main .overMij {
   margin-top: 2em;
 }
 
-main .overMij >*{
+main .overMij>* {
   margin-bottom: 1em;
 }
 
-main .overMij a{
+main .overMij {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
+  grid-auto-flow: dense;
+}
+
+main .overMij span {
+  grid-column: span 2;
+}
+
+main .overMij img {
+  max-width: 100%;
+  border-radius: 100%;
+  border: 0.5em solid black;
+}
+
+main .overMij h3 {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+main .overMij a {
   color: black;
 }
 
-main .overMij a:hover{
+main .overMij a:hover {
   color: red;
 }
-
 
 /* Einde over mij */
-
 /* Einde main */
-
-
-
 /* Begin anders op detailpagina's */
-
-.frontEnd main a, .programmeren main a, .portfolio main a{
+.frontEnd main a, .programmeren main a, .portfolio main a {
   color: black;
 }
 
-.frontEnd main a:hover, .programmeren main a:hover, .portfolio main a:hover{
+.frontEnd main a:hover, .programmeren main a:hover, .portfolio main a:hover {
   color: red;
 }
 
-.frontEnd main > div{
+.frontEnd main>div {
   display: flex;
   flex-wrap: wrap;
   width: 20em;
   flex-direction: row;
-
 }
 
-.frontEnd main > div > a{
+.frontEnd main>div>a {
   width: 10em;
   height: 3em;
   display: flex;
   align-items: center;
 }
 
-.frontEnd main h2{
+.frontEnd main h2 {
   margin-top: 1em;
 }
 
-.portfolio main li{
+.portfolio main li {
   font-weight: bold;
 }
 
 /* Einde anders op detailpagina's */
-
-
-
-
 /* Begin footer */
-
 /* Begin gradient footer */
-.gradientFooter{
+.gradientFooter {
   position: relative;
   height: 50vh;
   width: 100vw;
   overflow: hidden;
 }
-footer .gradientFooter div{
+
+footer .gradientFooter div {
   left: 25%;
-  bottom:50%;
-  transform:translate(-50%, 50%) rotate(189deg);
-width: 200vw;
-position: absolute;
+  bottom: 50%;
+  transform: translate(-50%, 50%) rotate(189deg);
+  width: 200vw;
+  position: absolute;
 }
 
-footer .gradientFooter div:nth-of-type(1){
+footer .gradientFooter div:nth-of-type(1) {
   z-index: 2;
   height: 20vh;
-  background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 100%);
 }
 
-footer .gradientFooter div:nth-of-type(2){
+footer .gradientFooter div:nth-of-type(2) {
   z-index: 1;
   height: 100vh;
-  background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 100%);
 }
 
 /* Begin gradient footer */
-
 /* Begin tekst in footer */
-
-footer article{
-position: absolute;
-z-index: 3;
-bottom: 1em;
-left: 1em;
+footer article {
+  position: absolute;
+  z-index: 3;
+  bottom: 1em;
+  left: 1em;
 }
 
-footer ul li a{
+footer ul li a {
   color: white;
 }
 
-
-footer ul li a:hover{
+footer ul li a:hover {
   color: red;
 }
 
 /* Einde teskt in footer */
-
 /* Einde footer */
+body {
+  position: relative;
+  animation: transitionIn 1s;
+}
+
+.opacityZero {
+  animation: transitionOut 1s;
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes transitionOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
