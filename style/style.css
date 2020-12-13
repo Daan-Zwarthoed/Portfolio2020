@@ -1,3 +1,5 @@
+
+
 *, html {
   box-sizing: border-box;
   margin: 0;
@@ -97,6 +99,9 @@ nav ul li:hover, nav div:nth-of-type(1):hover {
 /* Begin intro */
 .intro {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 .intro>* {
