@@ -475,10 +475,13 @@ footer ul li a:hover {
 body {
   position: relative;
   animation: transitionIn .6s;
+  animation-fill-mode: both;
 }
 
 .opacityZero {
   animation: transitionOut .6s;
+  animation-fill-mode: both;
+  
 }
 
 @keyframes transitionIn {
